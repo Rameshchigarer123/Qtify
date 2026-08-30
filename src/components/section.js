@@ -18,7 +18,7 @@ function Section({ title, apiUrl }) {
       });
   }, [apiUrl]);
 
-  const visibleAlbums = showAll ? albums : albums.slice(0, 8);
+  const visibleAlbums = albums;
 
   return (
     <Box sx={{ padding: '24px', backgroundColor: '#121212' }}>

@@ -26,7 +26,11 @@ function Hero() {
         </Typography>
       </Box>
 
-      <HeadphonesIcon sx={{ color: '#34C94B', fontSize: 100 }} />
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3721/3721984.png"
+        alt="headphones"
+        style={{ width: '150px', height: '150px' }}
+      />
     </Box>
   );
 }

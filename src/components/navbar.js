@@ -15,8 +15,8 @@ function Navbar() {
         boxShadow: 'none',
       }}
     >
-      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, marginLeft: '16px' }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, marginLeft: '24px' }}>
           <HeadphonesIcon sx={{ color: '#000', fontSize: 28 }} />
           <Typography
             variant="h6"
@@ -49,6 +49,7 @@ function Navbar() {
             color: '#34C94B',
             textTransform: 'none',
             borderRadius: '4px',
+            fontFamily: 'Poppins, sans-serif',
             '&:hover': { backgroundColor: '#222' },
           }}
         >
