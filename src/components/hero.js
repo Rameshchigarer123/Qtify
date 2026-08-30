@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
-import HeadphonesIcon from '@mui/icons-material/Headphones';
+
 
 function Hero() {
   return (
