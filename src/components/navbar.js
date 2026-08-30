@@ -17,8 +17,14 @@ function Navbar() {
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, marginLeft: '24px' }}>
-          <HeadphonesIcon sx={{ color: '#000', fontSize: 28 }} />
-          <Typography
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/3721/3721984.png"
+              alt="logo"
+              style={{ width: '28px', height: '28px' }}
+            />
+          </Box>
+          <Typography       
             variant="h6"
             sx={{ color: '#000', fontWeight: 'bold' }}
           >
