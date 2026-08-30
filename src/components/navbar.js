@@ -16,7 +16,7 @@ function Navbar() {
       }}
     >
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, marginLeft: '16px' }}>
           <HeadphonesIcon sx={{ color: '#000', fontSize: 28 }} />
           <Typography
             variant="h6"
@@ -46,7 +46,7 @@ function Navbar() {
           variant="contained"
           sx={{
             backgroundColor: '#000',
-            color: '#fff',
+            color: '#34C94B',
             textTransform: 'none',
             borderRadius: '4px',
             '&:hover': { backgroundColor: '#222' },

@@ -3,33 +3,40 @@ import axios from 'axios';
 import { Box, Typography } from '@mui/material';
 import Card from './Card';
 
-function Section() {
+function Section({ title, apiUrl }) {
   const [albums, setAlbums] = useState([]);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     axios
-      .get('https://qtify-backend.labs.crio.do/albums/top')
+      .get(apiUrl)
       .then((response) => {
         setAlbums(response.data);
       })
       .catch((error) => {
         console.error('Error fetching albums:', error);
       });
-  }, []);
+  }, [apiUrl]);
+
+  const visibleAlbums = showAll ? albums : albums.slice(0, 8);
 
   return (
     <Box sx={{ padding: '24px', backgroundColor: '#121212' }}>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
         <Typography variant="h6" sx={{ color: '#fff', fontWeight: 'bold' }}>
-          Top Albums
+          {title}
         </Typography>
-        <Typography variant="body2" sx={{ color: '#4CAF50', cursor: 'pointer' }}>
-          Collapse
+        <Typography
+          variant="body2"
+          sx={{ color: '#4CAF50', cursor: 'pointer' }}
+          onClick={() => setShowAll(!showAll)}
+        >
+          {showAll ? 'Collapse' : 'Show all'}
         </Typography>
       </Box>
 
       <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-        {albums.map((album) => (
+        {visibleAlbums.map((album) => (
           <Card
             key={album.id}
             image={album.image}
