@@ -2,7 +2,6 @@
 import React from 'react';
 import { AppBar, Toolbar, InputBase, Button, Box, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
-import HeadphonesIcon from '@mui/icons-material/Headphones';
 
 function Navbar() {
   return (
